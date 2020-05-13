@@ -9,10 +9,10 @@ import data from '../../dummy-data'
 
 const PostsPage = () => {
   // set up state for your data
-  const [postData, setPostData] = useState(data)
+  const [postData] = useState(data)
   return (
     <div className="posts-container-wrapper">
-      {postData.map(post => <Post post={post}/>)}
+      {postData.map((post, index) => <Post key = {index} post={post}/>)}
     </div>
   );
 };
